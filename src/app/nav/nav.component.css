@@ -1,0 +1,118 @@
+
+.top{
+    background-image: linear-gradient(to right, #00ccff, #08cded,#15ced1, #00d4cd, #00d4b5, #0ed4aa, #20d39d, #31d28f);
+    height: 45px;
+}
+
+
+nav{
+    background-color: white; 
+    height: 140px;
+    /* padding-right: 10px; */
+    padding-top: 20px;
+}
+
+.logo{
+  height: 120px;
+  width: 50%;
+}
+.logo img{
+  height: 80px;
+  margin-top: 20px;
+  margin-right: 110px;
+}
+
+nav div {
+  float: right;
+  /* background-color: red; */
+}
+
+ ul {
+  list-style-type: none;
+  overflow: hidden;
+  height: 110px;
+}
+
+ li {
+    float: right; 
+    width: 160px;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 55px 30px; 
+    text-decoration: none;
+    font-size: 22px;
+    font-family: Assistant;
+  }
+
+  ul li img{
+    margin-top: 55px;
+  }
+  
+  .dropdown {
+    /* background-color: green; */
+    float: right; 
+    height: 120px;}
+
+#ii{
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 55px 30px; 
+  text-decoration: none;
+  font-size: 22px;
+  font-family: Assistant;
+}
+ .dropdown a {
+    text-decoration: none;
+    color: black;
+    /* background-color: red; */
+    height: 120px;
+    font-size: 20px;
+    padding: 15px;
+    display:inline-block;
+  }
+
+  .dropdown ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+.dropdown ul li {display: inline-block;}
+.dropdown ul li:hover {background: white;}
+.dropdown ul li:hover ul {display: block;}
+
+.dropdown ul li ul {
+  position: absolute;
+  width: 130px;
+  display: none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+  /* z-index: 1; */
+  border-radius: 3px 3px 3px 3px;
+}
+
+.dropdown ul li ul li { 
+  background: white; 
+  display: block; 
+  height: 55px;
+  width: 130px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 0px 60px 60px 0px; */
+
+}
+.dropdown ul li ul li a {display:block !important;} 
+.dropdown ul li ul li:hover {background: #cac8c8;}
+#ii:hover { text-decoration: underline red}
+
+/* footer{
+  width: 100%;
+  background-color: red;
+  float: right;
+  padding-right: 550px;
+} */

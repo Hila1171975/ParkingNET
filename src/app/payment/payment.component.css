@@ -1,0 +1,35 @@
+.title{
+    height: 180px;
+    width: 100%;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.icn{
+    margin-top: 5px;
+    margin-right: 50%;
+    margin-bottom: 0px;
+    height: 100px;
+    width: 100;
+}
+.pas{
+    background-image: linear-gradient(to right, #00ccff, #08cded,#15ced1, #00d4cd, #00d4b5, #0ed4aa, #20d39d, #31d28f);
+    height: 5px;
+    width: 100px;
+    margin-right: 50%;
+}
+.pay{
+    background-color: whitesmoke;
+    height: 450px;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inp{
+    margin-bottom: 25px;
+    margin-right: 45%;
+    height: 45px;
+    width: 220px;
+    background-color: whitesmoke;
+    border-color: #00ccff;
+    font-size: large;
+}
+

@@ -1,0 +1,86 @@
+<html lang="en" style="direction: rtl; font-family: Assistant; ">
+
+<div><img src='../assets/img/Asset43.png' width="100%"></div>
+
+<div class="title">
+    <div>
+        <p>{{myTitle}}</p>
+    </div>
+    <div class="underLine"></div>
+</div>
+
+<div class="content">
+    <div class="frm">
+        <form>
+            <h1 style="font-weight: 900; font-size: 30px;">כתובת החניה:</h1><br>
+            <input class="inp1" type="text" placeholder="עיר, רחוב, מספר בית..." name="Address"
+                [(ngModel)]="newParking.Street" required>
+            <br><br>
+            <label>זמני השכרה:</label>
+            <img src='../assets/icon/Asset19.png' width="30px" style="margin-right: 10px; margin-bottom: 10px;"><br>
+            <input class="inp1" type="number" placeholder="1" name="UserName" required>
+            <br><br>
+            <h1 style="font-weight: 900; font-size: 30px;">פרטי חניה:</h1><br>
+            <label>שער אלקטרוני:
+                <label> <input style="margin-right: 10px;" type="radio" name="radio1" (change)="ChangeElectronicGate(1)"
+                        [checked]="newParking.ElectronicGate"> כן</label>
+                <label> <input style="margin-right: 10px;" type="radio" name="radio1" (change)="ChangeElectronicGate(0)"
+                        [checked]="newParking.ElectronicGate"> לא</label>
+            </label>
+            <br>
+
+            <label> <input type="radio" name="radio2" (change)="ChangeIndoor(1)" [checked]="newParking.Indoor">
+                מקורה</label>
+            <label> <input style="margin-right: 10px;" type="radio" name="radio2" (change)="ChangeIndoor(0)"
+                    [checked]="newParking.Indoor"> לא
+                מקורה</label>
+            <br>
+            <label> <input type="radio" name="radio3" (change)="ChangeShady(1)" [checked]="newParking.Shady"> צל</label>
+            <label> <input style="margin-right: 10px;" type="radio" name="radio3" (change)="ChangeShady(0)"
+                    [checked]="newParking.Shady"> ללא צל</label>
+
+            <br>
+            <label>מיועד ל:<br>
+                <label> <input type="checkbox" name="checkbox1" [(ngModel)]="ch1"> רכב פרטי</label>
+                <label> <input style="margin-right: 10px;" type="checkbox" name="checkbox2" [(ngModel)]="ch2">
+                    מסחרי</label>
+                <label> <input style="margin-right: 10px;" type="checkbox" name="checkbox3" [(ngModel)]="ch3"> אוטובוס
+                </label>
+                <label> <input style="margin-right: 10px;" type="checkbox" name="checkbox4" [(ngModel)]="ch4"> רכב משא
+                    גדול</label>
+            </label>
+            <br>
+            <h1 style="font-weight: 900; font-size: 30px;">הערות:</h1><br>
+            <label>זמן ביטול מראש:</label> <input style="margin-right: 10px; width: 200px; height: 24px;" type="number"
+                placeholder="1" id="cancelTime" name="cancelTime">
+        </form>
+
+
+    </div>
+    <!-- <div class="gallery">
+        <input type="file" style="border: none;" style="height: 100px;"><img src='../assets/icon/download.png' height="40px">
+    </div> -->
+    <div class="gallery">
+
+        <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+
+        <div class="file-upload">
+
+            {{fileName || ""}}
+
+            <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+                <img src='../assets/icon/download.png' height="40px">
+                בחר קובץ
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<div (click)="add()"><img id="img2" src='../assets/icon/Asset31.png'></div>
+<img src=this.newParking.IMG1 height="40px">
+
+
+</html>
+<app-footer1></app-footer1>
+<router-outlet></router-outlet>

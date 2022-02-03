@@ -1,0 +1,41 @@
+div{
+    float: right;
+    width: 100%;
+}
+
+.title{
+    height: 160px;
+}
+
+p{
+    padding-top: 20px;
+    height: 60px;
+    /* margin-top: 0px; */
+    font-size: 36px;
+    color: black;
+    font-family: Assistant;
+    font-weight: 900;
+  }
+
+.underLine{
+    background-image: linear-gradient(to right, #00ccff, #08cded,#15ced1, #00d4cd, #00d4b5, #0ed4aa, #20d39d, #31d28f);
+    width: 100px;
+    height: 2px;
+    margin-right: 580px;
+    margin-top: 3px;
+} 
+
+.tbl{
+    background-color: #f2f2f2;
+    /* height: 400px; */
+}
+
+th{
+    margin: 10px;
+    padding-left: 80px;
+}
+  
+
+
+
+

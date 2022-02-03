@@ -1,0 +1,46 @@
+<div class="signIn">
+  <form>
+    <div class="container">
+      <h1>התחבר לאתר</h1>
+      <label for="UserName">שם משתמש:</label><br>
+      <input type="text" placeholder="הכנס שם משתמש" id="UserName" name="UserName" required>
+      <br>
+      <label for="psw">סיסמא:</label><br>
+      <input type="password" placeholder="הכנס סיסמא" id="psw" name="psw" required>
+    </div>
+    <img id="img1" src='../assets/icon/Asset49.png'>
+  </form>
+</div>
+
+<div class="signUp">
+  <form #myForm="ngForm" class="form-group" >
+    <div class="container">
+      <h1>הרשם לאתר</h1>
+      <label for="UserName">שם משתמש:</label><br>
+      <input class="form-control" type="text" placeholder="הכנס שם משתמש" id="UserName" name="UserName"  [(ngModel)]="newUser.Name" required #UserName="ngModel">
+      <div class="alert-danger" *ngIf="UserName.invalid && ( UserName.dirty || UserName.touched)">
+        <p *ngIf="UserName.errors?.['required']">שדה חובה</p>   
+      </div>
+      <br>
+
+
+
+      <label for="phone">טלפון:</label><br>
+      <input type="tel" placeholder="הכנס טלפון" id="phone" name="phone" [(ngModel)]="newUser.Phone" required>
+      <br>
+
+      <label for="psw">סיסמא:</label><br>
+      <input type="password" placeholder="הכנס סיסמא" id="psw" name="psw" [(ngModel)]="newUser.Password" required>
+      <br>
+
+      <label for="psw-repeat">אישור סיסמא:</label><br>
+      <input type="password" placeholder="אישור סיסמא" name="psw-repeat" [(ngModel)]="password2" required>
+      <br>
+      <img id="img2" src='../assets/icon/Asset48.png' (click)="addUser()">
+
+    </div>
+  </form>
+</div>
+
+<router-outlet></router-outlet>
+
