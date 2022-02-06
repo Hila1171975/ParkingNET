@@ -31,7 +31,7 @@ export class UserService {
         else
           alert("תקלה ברישום משתמש חדש נסה שנית!!!")
       },
-      err => { console.log("err") });
+      err => { console.log(err) });
   }
 
   //  עדכון משתמש  

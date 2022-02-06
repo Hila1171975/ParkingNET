@@ -109,7 +109,7 @@ export class EditParkingDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.newParking.AccountId = 2;
+    this.newParking.AccountId = 3;
     this.newParking.CityId = 1;
     this.newParking.UserId = this.UserService.userId;
     this.newParking.PayPerHour = 2;
