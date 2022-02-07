@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BankDetailsComponent } from './bank-details/bank-details.component';
+import { CalenderComponent } from './calender/calender.component';
 import { EditParkingDetailsComponent } from './edit-parking-details/edit-parking-details.component';
 import { Footer1Component } from './footer1/footer1.component';
 import { HomeComponent } from './home/home.component';
@@ -21,7 +22,9 @@ const routes: Routes = [
           {path: "myParkingList", component: ParkingListComponent },
           {path: "editParkingDetails/:id", component: EditParkingDetailsComponent },
           {path: "myFooter", component: Footer1Component },
-          {path: "myMap", component: MapComponent }
+          {path: "myMap", component: MapComponent },
+          {path: "myCalender", component: CalenderComponent }
+
     ]},
 ];
 

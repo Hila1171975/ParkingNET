@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.router.navigate(['/nav/myhome'])
+    this.router.navigate(['/nav/myCalender'])
 
     ;
   }

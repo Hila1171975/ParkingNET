@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MapComponent } from './map/map.component';
 import { ContactComponent } from './contact/contact.component'
+import { ScheduleModule, DayService, WeekService, WorkWeekService, MonthService, AgendaService} from '@syncfusion/ej2-angular-schedule';
+import { CalenderComponent } from './calender/calender.component';
 
 @NgModule({
   declarations: [
@@ -37,15 +39,17 @@ import { ContactComponent } from './contact/contact.component'
     Footer1Component,
     MapComponent,
     ContactComponent,
+    CalenderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    ScheduleModule
   ],
-  providers: [BankAccountService,CityService, ParkingService, RentService, UserService],
+  providers: [BankAccountService,CityService, ParkingService, RentService, UserService,  DayService, WeekService, WorkWeekService, MonthService, AgendaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

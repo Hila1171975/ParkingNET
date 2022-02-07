@@ -1,22 +1,33 @@
+.loginBorder{
+    width: 604px; 
+    border: 2px solid;
+    border-image:linear-gradient(to right, #00ccff, #08cded,#15ced1, #00d4cd, #00d4b5, #0ed4aa, #20d39d, #31d28f)1;
+}
 div{
     height: 100%;
-    width: 50%;
+    width: 300px;
     float: right;
 }
 
 .signUp{
     background-image: linear-gradient(to right, #00ccff, #08cded,#15ced1, #00d4cd, #00d4b5, #0ed4aa, #20d39d, #31d28f);
     border-radius: 0px 60px 60px 0px;
+    padding-right: 50px;
+
+}
+.signIn{
+    height: 460px;
+    padding-right: 50px;
+
 }
 
 .container{
     padding: 12px 5px;
-    margin: 20px 200px;
     font-family: Assistant ;
 }
 
 h1{
-    margin-right: 5px;
+    margin-right: 1px;
     margin-bottom: 20px;
     font-size: 40px;
     font-weight: bold;
@@ -39,16 +50,9 @@ input {
     color: #808080;
 }
 
-/* .signUp h1{
-    color: white;
-} */
- /* .signUp label{
-     color: white;
- } */
-
  #img1{
     height: 32px;
-    margin-right: 220px;
+    margin-right: 30px;
     margin-top: 130PX;
  }
  #img2{

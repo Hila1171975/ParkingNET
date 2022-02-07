@@ -52,6 +52,11 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
 
+    // $(document).ready(function(){
+    //   $(".b1").click(function(){
+    //     $(".loginBorder").fadeOut(1000);
+    //   });
+    // });
   }
 
 }

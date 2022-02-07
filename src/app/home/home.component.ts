@@ -9,6 +9,8 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  public showOrHidePopup: boolean = false;
+  
   ngOnInit(): void {
     //HHHHH
   }

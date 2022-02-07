@@ -1,3 +1,5 @@
+<button class="b1">click me to open loging div</button>
+<div class="loginBorder">
 <div class="signIn">
   <form #myForm="ngForm" class="form-group">
     <div class="container">
@@ -40,10 +42,11 @@
       <label for="psw-repeat">אישור סיסמא:</label><br>
       <input type="password" placeholder="אישור סיסמא" name="psw-repeat" [(ngModel)]="password2" required>
       <br>
-      <img id="img2" src='../assets/icon/Asset48.png' (click)="addUser()">
-
     </div>
+    <img id="img2" src='../assets/icon/Asset48.png' (click)="addUser()">
+
   </form>
+</div>
 </div>
 
 <router-outlet></router-outlet>
