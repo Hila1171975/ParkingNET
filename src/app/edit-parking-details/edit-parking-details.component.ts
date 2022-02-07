@@ -71,29 +71,10 @@ export class EditParkingDetailsComponent implements OnInit {
 
 
 
-  // ערך רדיוס שער אלקטרוני
-  ChangeElectronicGate(val: number) {
-    if (val == 1)
-      this.newParking.ElectronicGate = true;
-    else
-      this.newParking.ElectronicGate = false;
-  }
 
-  //  ערך רדיוס מקורה/לא מקורה
-  ChangeIndoor(val: number) {
-    if (val == 1)
-      this.newParking.Indoor = true;
-    else
-      this.newParking.Indoor = false;
-  }
 
-  //  ערך רדיוס מוצל/לא מוצל
-  ChangeShady(val: number) {
-    if (val == 1)
-      this.newParking.Shady = true;
-    else
-      this.newParking.Shady = false;
-  }
+
+
   splitSTR(str: String) {
     let array = str.split(',')
     array.forEach(element => {

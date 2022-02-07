@@ -21,23 +21,29 @@
             <input class="inp1" type="number" placeholder="1" name="UserName" required>
             <br><br>
             <h1 style="font-weight: 900; font-size: 30px;">פרטי חניה:</h1><br>
-            <label>שער אלקטרוני:
-                <label> <input style="margin-right: 10px;" type="radio" name="radio1" (change)="ChangeElectronicGate(1)"
-                        [checked]="newParking.ElectronicGate"> כן</label>
-                <label> <input style="margin-right: 10px;" type="radio" name="radio1" (change)="ChangeElectronicGate(0)"
-                        [checked]="newParking.ElectronicGate"> לא</label>
-            </label>
+            <label>שער אלקטרוני:</label>
+            <input id="ElectronicGateTrue" style="margin-right: 10px;" type="radio" name="radio1"
+                [(ngModel)]="newParking.ElectronicGate" [value]="true">
+            <label for="ElectronicGateTrue"> כן</label>
+
+            <input id="ElectronicGateFalse" style="margin-right: 10px;" type="radio" name="radio1"
+                [(ngModel)]="newParking.ElectronicGate" [value]="false">
+            <label for="ElectronicGateFalse"> לא</label>
             <br>
 
-            <label> <input type="radio" name="radio2" (change)="ChangeIndoor(1)" [checked]="newParking.Indoor">
-                מקורה</label>
-            <label> <input style="margin-right: 10px;" type="radio" name="radio2" (change)="ChangeIndoor(0)"
-                    [checked]="newParking.Indoor"> לא
-                מקורה</label>
+            <input id="indoorTrue" type="radio" name="radio2" [(ngModel)]="newParking.Indoor" [value]="true">
+            <label for="indoorTrue"> מקורה</label>
+
+            <input id="indoorFalse" style="margin-right: 10px;" type="radio" name="radio2"
+                [(ngModel)]="newParking.Indoor" [value]="false">
+            <label for="indoorFalse"> לא מקורה</label>
             <br>
-            <label> <input type="radio" name="radio3" (change)="ChangeShady(1)" [checked]="newParking.Shady"> צל</label>
-            <label> <input style="margin-right: 10px;" type="radio" name="radio3" (change)="ChangeShady(0)"
-                    [checked]="newParking.Shady"> ללא צל</label>
+
+            <input id="ShadyTrue" type="radio" name="radio3" [(ngModel)]="newParking.Shady" [value]="true">
+            <label for="ShadyTrue"> צל</label>
+            <input id="ShadyFalse" style="margin-right: 10px;" type="radio" name="radio3" [(ngModel)]="newParking.Shady"
+                [value]="false">
+            <label for="ShadyFalse"> ללא צל</label>
 
             <br>
             <label>מיועד ל:<br>
