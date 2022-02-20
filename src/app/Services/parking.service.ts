@@ -45,6 +45,11 @@ export class ParkingService {
        return this.http.post<boolean>(this.url+"updateParking",p)
      }
 
+     // הוספת תמונה
+     public uploadImage(formData: FormData): Observable<Array<string>> {
+      return this.http.post<Array<string>>(`${this.url}uploadImage/`, formData)
+    }
+     
 
    
 }

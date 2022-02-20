@@ -70,7 +70,7 @@ form label{
 .gallery{
     background-color: white;
     margin-right: 20px;
-    height: 400px;
+    height: 600px;
     width: 500px;
 }
 
@@ -78,7 +78,20 @@ form label{
     background: black;
 }
 
+.btnn{
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+}
 
 .file-input {
     display: none;
+    border: none;
+    height: 100px;
+    
   }

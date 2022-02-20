@@ -1,7 +1,21 @@
 .loginBorder{
-    width: 604px; 
-    border: 2px solid;
-    border-image:linear-gradient(to right, #00ccff, #08cded,#15ced1, #00d4cd, #00d4b5, #0ed4aa, #20d39d, #31d28f)1;
+    width: 600px; 
+    /* border: 2px solid; */
+    /* border-image:linear-gradient(to right, #00ccff, #08cded,#15ced1, #00d4cd, #00d4b5, #0ed4aa, #20d39d, #31d28f)1; */
+    margin-right: 25%;
+    margin-bottom: 30px;
+    margin-top: 8px;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.8);
+    animation: fadeIn 3s ;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
 }
 div{
     height: 100%;

@@ -3,6 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Parking } from 'src/classes/Parking';
 import { ParkingService } from '../Services/parking.service';
 import { UserService } from '../Services/user.service';
+import { saveAs } from 'file-saver';
+import * as FileSaver from 'file-saver';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edit-parking-details',
@@ -17,29 +20,31 @@ export class EditParkingDetailsComponent implements OnInit {
   ch2: boolean = false
   ch3: boolean = false
   ch4: boolean = false
-
-  constructor(public ParkingService: ParkingService, public ActiveRoute: ActivatedRoute,public UserService:UserService) { }
-
+  i: number = 0
   fileName = '';
+  constructor(public ParkingService: ParkingService, public ActiveRoute: ActivatedRoute, public UserService: UserService, public sanitizer: DomSanitizer) { }
 
-  onFileSelected(event:any) {
 
-      const file:File = event.target.files[0];
-
-      if (file) {
-
-          this.fileName = file.name;
-
-          const formData = new FormData();
-
-          formData.append("thumbnail", file);
-
-          this.newParking.IMG1="C:/Users/hila1/Desktop/אייקונים ותמונות/" + file.name;
-
-         // const upload$ = this.http.post("/api/thumbnail-upload", formData);
-
-         // upload$.subscribe();
+  onFileSelected(event: any) {
+    let formData = new FormData();
+    this.fileName = ""
+    for (let index = 0; index < event.target.files.length && index < 3; index++) {
+      let element = event.target.files[index];
+      if (element) {
+        this.fileName += element.name + ",";
+        // + this.i++
+        formData.append("myImage" + index, element);
       }
+    }
+    this.ParkingService.uploadImage(formData).subscribe(suc => {
+      this.newParking.IMG1 = suc[0]
+      this.newParking.IMG2 = suc[1]
+      this.newParking.IMG3 = suc[2]
+    }, err => { console.log })
+  }
+
+  photoURL(url: any) {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 
   add() {
@@ -55,6 +60,7 @@ export class EditParkingDetailsComponent implements OnInit {
     }
   }
 
+  // שרשור של סוגי החניה שנבחרו
   sizeForStr() {
     let str = ""
     if (this.ch1 == true)
@@ -69,12 +75,7 @@ export class EditParkingDetailsComponent implements OnInit {
     return str
   }
 
-
-
-
-
-
-
+  // פיצול מחרוזת של סוגי החניה וסימון וי בהתאם
   splitSTR(str: String) {
     let array = str.split(',')
     array.forEach(element => {
