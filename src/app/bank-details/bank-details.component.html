@@ -6,13 +6,15 @@
 </div>
 <div class="bank">
     <p style="margin-right: 47%; margin-bottom: 20px; margin-top: 35px;">פרטי הבנק שלי:</p>
-    <input class="inp" type="number" placeholder="שם בעל חשבון">
-    <input class="inp" type="number" placeholder="מספר בנק">
-    <input class="inp" type="number" placeholder="מספר חשבון">
-    <input class="inp" type="number" placeholder="מספר בנק">
+    <form class="form-group">
+    <input class="inp" type="text" placeholder="שם בעל חשבון" name="OwnerName" [(ngModel)]="newBankAccount.OwnerName">
+    <input class="inp" type="text" placeholder="שם בנק" name="Bank" [(ngModel)]="newBankAccount.Bank">
+    <input class="inp" type="text" placeholder="סניף" name="Branch" [(ngModel)]="newBankAccount.Branch">
+    <input class="inp" type="text" placeholder="מספר חשבון" name="AccountNumber"
+        [(ngModel)]="newBankAccount.AccountNumber">
     <div style="width: 100%;">
-        <img src='../assets/icon/Asset25.png' style="margin-right: 47%; margin-top: 10px;" width="180">
+        <img src='../assets/icon/Asset25.png' style="margin-right: 47%; margin-top: 10px;" width="180" (click)="save()">
     </div>
+    </form>
 </div>
 <router-outlet></router-outlet>
-

@@ -35,12 +35,21 @@
       <br>
 
       <label for="psw">סיסמא:</label><br>
-      <input type="password" placeholder="הכנס סיסמא" id="psw" name="psw" [(ngModel)]="newUser.Password" required>
-      <br>
+        <input type="password" placeholder="הכנס סיסמא" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,22}" [(ngModel)]="newUser.Password" required maxlength="20" #myPassword="ngModel">
+        <div class="alert-danger" *ngIf="myPassword.invalid && (myPassword.dirty || myPassword.touched)">  
+          <p *ngIf="myPassword.errors?.['required']">שדה חובה</p> 
+          <p *ngIf="myPassword.errors?.['pattern']">הסיסמא חייבת להכיל לפחות אות קטנה אחת באנגלית, אות גדולה אחת באנגלית ומספר אחד. סה"כ 6-20 תווים</p>
+        </div><br> 
+        <br>
 
-      <label for="psw-repeat">אישור סיסמא:</label><br>
-      <input type="password" placeholder="אישור סיסמא" name="psw-repeat" [(ngModel)]="password2" required>
-      <br>
+        <label for="psw-repeat">אישור סיסמא:</label><br>
+        <input type="password" placeholder="אישור סיסמא" name="psw-repeat" [(ngModel)]="repeatPassword" required  minlength="4" maxlength="20" #myPasswordRepeat="ngModel">
+        <div class="alert-danger" *ngIf="myPasswordRepeat.invalid && (myPasswordRepeat.dirty || myPasswordRepeat.touched)">  
+          <p *ngIf="myPasswordRepeat.errors?.['required']">שדה חובה</p> 
+          <p *ngIf="myPasswordRepeat.errors?.['myPasswordRepeat=myPassword']">הסיסמה אינה תואמת</p> 
+        </div><br>
+       <br>
+
     </div>
     <img id="img2" src='../assets/icon/Asset48.png' (click)="addUser()">
 
@@ -48,6 +57,5 @@
 </div>
 </div>
 <app-footer1></app-footer1>
-
 <router-outlet></router-outlet>
 
