@@ -28,7 +28,6 @@ ul{
 li{
   float: right;
   padding-left: 50px;
-  background-color: salmon;
 }
 
 .d1{
@@ -58,7 +57,7 @@ li{
   color: white;
   /* margin: 60px ; */
   margin-right: 105px;
-  margin-top: 60px
+  margin-top: 60px;
 }
 
 .d2 div img{
@@ -68,14 +67,10 @@ li{
 
 .content3 div{
   float: right;
-  height: 400px;
   width: 480px;
-  /* background-color: red; */
-  /* padding-top: 50px; */
   font-size: 50px;
   font-family: Assistant;
   margin: 40px;
-  /* background-color: red; */
 }
 
 #img1{
@@ -91,3 +86,6 @@ li{
   width: 250px;
 }
 
+#btnDIV{
+  margin: 0px;
+}

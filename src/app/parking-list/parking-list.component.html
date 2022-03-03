@@ -5,38 +5,26 @@
 <div class="title">
     <div><p>החניות שלי</p></div>
     <div class="underLine"></div>
-    <a style="margin-right: 253px; float: right; margin-top: 24px;" routerLink="/nav/editParkingDetails/0"><img src="../assets/icon/hanaia.png" width="170px" ></a>
+    <a style="margin-right: 301px; float: right; margin-top: 24px;" routerLink="/nav/editParkingDetails/0"><img src="../assets/icon/hanaia.png" width="170px" ></a>
 </div>
 
 <div class="tbl">
     <table style="font-size: 30px; width: 100%; margin-top: 50px;"  >
-        <!-- <tr>
-          <td>יפו 11, ירושלים</td>
-          <td>תמונה</td>
-          <td><a routerLink="/nav/editParkingDetails"><img src="../assets/icon/Asset16.png" width="170px"></a></td>
-        </tr>
-        <br>
-        <div class="underLine" style="width: 100%; margin-right: 250px;"></div>
-        <br>
-        <tr>
-            <td>שמואל הנביא 1, ירושלים</td>
-            <td>תמונה</td>
-            <td><a routerLink="/nav/editParkingDetails"><img src="../assets/icon/Asset16.png" width="170px"></a></td>
-          </tr>
-          <br>
-          <div class="underLine" style="width: 100%; margin-right: 250px;"></div> -->
           <tr *ngFor="let item of lUserParking">
             <th>{{item.Street}} {{item.HouseNum}} CityId={{item.CityId}}  UserId{{item.UserId}}</th>
             <!-- <th>{{item.HouseNum}}</th>
             <th>{{item.CityId}}</th> -->
-            <th>{{item.IMG1}} תמונה</th>
+            <th><img *ngIf="item.IMG1" src="./../../assets/gallery/{{item.IMG1}}" style="background-image: none; margin: 0px;margin-right: 5px;" height="50px">
+            <img *ngIf="item.IMG2" src="./../../assets/gallery/{{item.IMG2}}" style="background-image: none; margin: 0px;margin-right: 5px;" height="50px">
+            <img *ngIf="item.IMG3" src="./../../assets/gallery/{{item.IMG3}}" style="background-image: none; margin: 0px; margin-right: 5px;  " height="50px"></th>
+         
             <th><a routerLink="/nav/editParkingDetails/{{item.Id}}"><img src="../assets/icon/Asset16.png" width="170px"></a></th>
            <br>     
-           <br>       
-          </tr>
-          <br>
-            <div class="underLine" style="width: 100%; margin-right: 250px;"></div>
-            <br>
+           <br>
+           <!-- <tr *ngFor="let item of lUserParking">
+            <th><div class="underLine" style="width: 100%; margin-right: 250px;"></div></th>
+          </tr>  -->
+            <!-- <div class="underLine" style="width: 100%; margin-right: 250px;"></div> -->
       </table>
 
 </div>

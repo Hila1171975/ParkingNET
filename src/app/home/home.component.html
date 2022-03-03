@@ -41,7 +41,10 @@
     <div>
         <img id="img2" src='../assets/icon/Asset1.png'>
         <p>לפרסום החניה שלכם</p>
-        <a routerLink="/nav/login"><img id="img3" src='../assets/icon/Asset46.png'></a>
+        <!-- <a routerLink="/nav/login"><img id="img3" src='../assets/icon/Asset46.png'></a> -->
+        <div id="btnDIV" *ngIf="!UserService.isConnected"><a routerLink="/nav/login"><img id="img3" src='../assets/icon/Asset46.png'></a></div>
+        <!-- לבקש מהלל כפתור לחץ כאן במקרה שכבר מחובר ורוצה לפרסם חניה -->
+        <!-- <div id="btnDIV" *ngIf="UserService.isConnected"><a routerLink="/nav/login"><img id="img3" src='../assets/icon/Asset47.png'></a></div> -->
     </div>
 </div>
 <!-- <div *ngIf="showOrHidePopup" style=" left: 50%

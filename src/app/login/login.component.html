@@ -29,7 +29,7 @@
       <label for="phone">טלפון:</label><br>
       <input type="tel" placeholder="הכנס טלפון" id="phone" name="phone" pattern="05?[0-9]-?[0-9]{7}" [(ngModel)]="newUser.Phone" required #myPhone="ngModel">
       <div class="alert-danger" *ngIf="myPhone.invalid && (myPhone.dirty || myPhone.touched)">  
-        <p *ngIf="myPhone.errors?.['required']">שדה חובה</p>
+        <p *ngIf="myPhone.errors?.['required']" >שדה חובה</p>
         <p *ngIf="myPhone.errors?.['pattern']">מספר טלפון לא תקין</p>
     </div><br>
       <br>

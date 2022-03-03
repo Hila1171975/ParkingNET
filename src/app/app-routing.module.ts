@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { CalenderComponent } from './calender/calender.component';
+import { ContactComponent } from './contact/contact.component';
 import { EditParkingDetailsComponent } from './edit-parking-details/edit-parking-details.component';
 import { Footer1Component } from './footer1/footer1.component';
 import { HomeComponent } from './home/home.component';
@@ -23,39 +24,12 @@ const routes: Routes = [
           {path: "editParkingDetails/:id", component: EditParkingDetailsComponent },
           {path: "myFooter", component: Footer1Component },
           {path: "myMap", component: MapComponent },
-          {path: "myCalender", component: CalenderComponent }
+          {path: "myCalender", component: CalenderComponent },
+          {path: "contact", component: ContactComponent }
+
 
     ]},
 ];
-
-
-// const routes: Routes = [
-//   {path:"menu", component:MenuComponent,children:[
-//     {path:"payment",component:PaymentComponent},
-//     {path:"showClothDetails/:id",component:ShowClothDetailsComponent},
-//     {path:"myhome",component:HomeComponent, children:[
-//       {path:"singUp",component:SignUpComponent},
-//       {path:"singIn",component:SignInComponent}
-
-// ]},
-// {path:"myclothingList",component:ClothingListComponent,children:[
-//  // {path:"addNewCloth",component:EditClothingListComponent},
-//   {path:"editClothing/:id",component:EditClothingListComponent}
-// ]},
-
-// {path:"mycategoriesList",component:CategoriesListComponent,children:[
-//  // {path:"addNewCategory",component:EditCategoriesListComponent},
-//   {path:"editCategory/:id",component:EditCategoriesListComponent}
-// ]},
-
-// {path:"myCart",component:ShoppingCartComponent},
-// {path:"singUp",component:SignUpComponent},
-// {path:"singIn",component:SignInComponent}
-
-//   ]}
-// ];
-
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

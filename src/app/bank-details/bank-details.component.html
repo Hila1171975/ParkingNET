@@ -1,20 +1,25 @@
-<div><img class="img" src='../assets/img/Asset36.png'></div>
-<div class="title">
-    <div><img class="icn" src='../assets/icon/Asset18.png'></div>
-    <p style="margin-right: 45%; margin-top: 1px;">פרטי חשבון בנק</p>
-    <div class="pas"></div>
-</div>
-<div class="bank">
-    <p style="margin-right: 47%; margin-bottom: 20px; margin-top: 35px;">פרטי הבנק שלי:</p>
-    <form class="form-group">
-    <input class="inp" type="text" placeholder="שם בעל חשבון" name="OwnerName" [(ngModel)]="newBankAccount.OwnerName">
-    <input class="inp" type="text" placeholder="שם בנק" name="Bank" [(ngModel)]="newBankAccount.Bank">
-    <input class="inp" type="text" placeholder="סניף" name="Branch" [(ngModel)]="newBankAccount.Branch">
-    <input class="inp" type="text" placeholder="מספר חשבון" name="AccountNumber"
-        [(ngModel)]="newBankAccount.AccountNumber">
-    <div style="width: 100%;">
-        <img src='../assets/icon/Asset25.png' style="margin-right: 47%; margin-top: 10px;" width="180" (click)="save()">
+<html lang="en" style="direction: rtl; text-align: center;">
+<div class="bankBorder">
+    <div><img src='../assets/img/Asset36.png' width="100%"></div>
+    <div class="title">
+        <div style="margin-top: 10px;"><img src='../assets/icon/Asset18.png' width="100px"></div>
+        <div>
+            <p>פרטי חשבון בנק</p>
+            <div class="underLine"></div>
+        </div>
     </div>
+    <div class="bank">
+        <p style="font-size:30px; font-weight: 100;">פרטי הבנק שלי:</p>
+        <form class="form-group">
+        <input type="text" placeholder="שם בעל חשבון" name="OwnerName" [(ngModel)]="newBankAccount.OwnerName">
+        <input type="text" placeholder="בנק"  name="Bank" [(ngModel)]="newBankAccount.Bank">
+        <input type="number" placeholder="סניף" name="Branch" [(ngModel)]="newBankAccount.Branch">
+        <input type="text" placeholder="מספר חשבון" name="AccountNumber" [(ngModel)]="newBankAccount.AccountNumber">
+        <div><img src='../assets/icon/Asset25.png' style=" margin-top: 10px;" width="180" (click)="save()"></div>
     </form>
+    </div>
+    <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
+
+</html>
+
