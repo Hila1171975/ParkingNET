@@ -72,26 +72,78 @@ form label{
     margin-right: 20px;
     height: 600px;
     width: 500px;
+    padding-top: 20px;
 }
 
 .container .checkmark:after {
     background: black;
 }
 
-.btnn{
-    border: 2px solid gray;
-    color: gray;
-    background-color: white;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: bold;
-    width: 200px;
+.btn{
+    margin-right: 220px;
+    margin-bottom: 10px;
 }
 
 .file-input {
     display: none;
     border: none;
-    height: 100px;
-    
+    height: 100px;    
+  }
+
+/* ================================= Gallery ================================= */
+  /* The grid: Four equal columns that floats next to each other */
+/* .column {
+    float: right;
+    width: 25%;
+  } */
+  #row{
+      margin-right: 10px;
+      width: fit-content;
+
+  }
+  #row div{
+      width: min-content;
+      margin-left: 5px;
+  }
+  /* Style the images inside the grid */
+  #row div img {
+    opacity: 0.8;
+    cursor: pointer;
+    /* margin-right: 10px; */
+  }
+  
+  #row div img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  #row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
   }

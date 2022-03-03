@@ -89,6 +89,17 @@ export class EditParkingDetailsComponent implements OnInit {
         this.ch4 = true
     });
   }
+  myFunction(imgs:any) {
+    expandImg:HTMLImageElement
+    // var expandImg = document.getElementById("expandedImg");
+    var expandImg = document.createElement('img');
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    if(imgText!=null)
+    imgText.innerHTML = imgs.alt;
+    if(expandImg!=null && expandImg.parentElement!=null)
+    expandImg.parentElement.style.display = "block";
+  }
 
   ngOnInit(): void {
     this.newParking.AccountId = 3;

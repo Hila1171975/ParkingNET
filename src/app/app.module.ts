@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MapComponent } from './map/map.component';
 import { ContactComponent } from './contact/contact.component'
-import { ScheduleModule, DayService, WeekService, WorkWeekService, MonthService, AgendaService} from '@syncfusion/ej2-angular-schedule';
+import { ScheduleModule, DayService, WeekService, WorkWeekService, MonthService, AgendaService, DragAndDropService, ResizeService} from '@syncfusion/ej2-angular-schedule';
 import { CalenderComponent } from './calender/calender.component';
 
 @NgModule({
@@ -49,7 +49,7 @@ import { CalenderComponent } from './calender/calender.component';
     GoogleMapsModule,
     ScheduleModule
   ],
-  providers: [BankAccountService,CityService, ParkingService, RentService, UserService,  DayService, WeekService, WorkWeekService, MonthService, AgendaService],
+  providers: [BankAccountService,CityService, ParkingService, RentService, UserService,  DayService, WeekService, WorkWeekService, MonthService, AgendaService,DragAndDropService,ResizeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
