@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   newUser: Users = new Users()
   existUser: Users = new Users()
-  password2: String = ""
+  repeatPassword: String = ""
   userId: number = -2
   constructor(public UserService: UserService, public router: Router) { }
 
