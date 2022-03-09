@@ -14,7 +14,6 @@ import { EditParkingDetailsComponent } from './edit-parking-details/edit-parking
 import { Footer1Component } from './footer1/footer1.component';
 import {HttpClientModule} from  '@angular/common/http'
 import { BankAccountService } from './Services/bank-account.service';
-import { CityService } from './Services/city.service';
 import { ParkingService } from './Services/parking.service';
 import { RentService } from './Services/rent.service';
 import { UserService } from './Services/user.service';
@@ -49,7 +48,7 @@ import { CalenderComponent } from './calender/calender.component';
     GoogleMapsModule,
     ScheduleModule
   ],
-  providers: [BankAccountService,CityService, ParkingService, RentService, UserService,  DayService, WeekService, WorkWeekService, MonthService, AgendaService,DragAndDropService,ResizeService],
+  providers: [BankAccountService, ParkingService, RentService, UserService,  DayService, WeekService, WorkWeekService, MonthService, AgendaService,DragAndDropService,ResizeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

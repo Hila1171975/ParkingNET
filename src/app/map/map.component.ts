@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FindParkingService } from '../Services/find-parking.service';
 
 @Component({
   selector: 'app-map',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  constructor(public FindParkingService: FindParkingService) { }
 
   ngOnInit(): void {
   }
