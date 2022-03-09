@@ -16,6 +16,7 @@ export class EditParkingDetailsComponent implements OnInit {
   newParking: Parking = new Parking();
   b: Boolean = true;
   myTitle: String = ""
+  bigImage:string = ""
   ch1: boolean = false
   ch2: boolean = false
   ch3: boolean = false
@@ -90,20 +91,11 @@ export class EditParkingDetailsComponent implements OnInit {
     });
   }
   myFunction(imgs:any) {
-    expandImg:HTMLImageElement
-    // var expandImg = document.getElementById("expandedImg");
-    var expandImg = document.createElement('img');
-    var imgText = document.getElementById("imgtext");
-    expandImg.src = imgs.src;
-    if(imgText!=null)
-    imgText.innerHTML = imgs.alt;
-    if(expandImg!=null && expandImg.parentElement!=null)
-    expandImg.parentElement.style.display = "block";
+    this.bigImage = imgs
   }
 
   ngOnInit(): void {
     this.newParking.AccountId = 3;
-    this.newParking.CityId = 1;
     this.newParking.UserId = this.UserService.userId;
     this.newParking.PayPerHour = 2;
 

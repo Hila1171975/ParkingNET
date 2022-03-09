@@ -26,6 +26,7 @@ export class BankDetailsComponent implements OnInit {
     // })
   }
   save() {
+    debugger;
     //זה הוספה תוסיף
     if (this.BankAccountService.isEdit == false) {
       this.BankAccountService.addBankAccount(this.newBankAccount).subscribe(suc => {

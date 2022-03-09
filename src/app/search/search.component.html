@@ -1,17 +1,20 @@
-<form>
+<form  #myForm="ngForm" class="form-group">
     <div class="row">
         <div class="icn"><img src='../assets/icon/Asset41.png'></div>
         <div class="div1">
             <div><img src='../assets/icon/Asset7.png'>הכנס מיקום</div>
-            <input type="text" placeholder="מיקומך הנוכחי">
+            <input type="text" placeholder="מיקומך הנוכחי" id="location" name="location" [(ngModel)]="myLocation" required #location="ngModel">
+            <div  class="alert-danger" *ngIf="location.invalid && ( location.dirty || location.touched)&&submited">
+                <p *ngIf="location.errors?.['required']">שדה חובה</p>   
+              </div>
         </div>
         <div class="div1">
             <div><img src='../assets/icon/Asset5.png'>הכנס שעה</div>
-            <input type="time" placeholder="שעה נוכחית">
+            <input type="time" placeholder="שעה נוכחית" id="EntryHour" name="EntryHour" value="{{TodayDate| date:'HH-mm'}}" [(ngModel)]="newRent.EntryHour" required #EntryHour="ngModel">
         </div>
         <div class="div1">
             <div><img src='../assets/icon/Asset4.png'>הכנס תאריך</div>
-            <input type="date" placeholder="תאריך נוכחי">
+            <input type="date" placeholder="תאריך נוכחי" id="EntryDate" name="EntryDate" value="{{TodayDate| date:'yyyy-mm-dd'}}"  [(ngModel)]="newRent.EntryDate" required #EntryDate="ngModel">
         </div>
     </div>
     <br><br><br><br>
@@ -21,21 +24,19 @@
         <div class="icn"><img src='../assets/icon/Asset40.png'></div>
         <div class="div1">
             <div><img src='../assets/icon/Asset5.png'>הכנס שעה</div>
-            <input type="time" placeholder="עד 00:00">
+            <input type="time" placeholder="עד 00:00" id="LeavingHour" name="LeavingHour" value="{{TodayDate| date:'HH-mm'}}" [(ngModel)]="newRent.LeavingHour" required #LeavingHour="ngModel">
         </div>
         <div class="div1">
             <div><img src='../assets/icon/Asset4.png'>הכנס תאריך</div>
-            <input type="date" placeholder="היום">
+            <input type="date" placeholder="היום"  id="LeavingDate" name="LeavingDate" value="{{TodayDate| date:'yyyy-mm-dd'}}" [(ngModel)]="newRent.LeavingDate" required #LeavingDate="ngModel">
         </div>
     </div>
     <br><br><br><br>
-
-
     <div class="row">
-        <a routerLink="/nav/myMap"><img class="btnSearch" src='../assets/icon/Asset39.png'></a>
+        <!-- <a routerLink="/nav/myMap"><img class="btnSearch" src='../assets/icon/Asset39.png'></a> -->
+        <a><img class="btnSearch" src='../assets/icon/Asset39.png' (click)="FindParking()"></a>
+   
     </div>
-
-
 
 </form>
 <router-outlet></router-outlet>

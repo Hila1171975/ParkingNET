@@ -14,7 +14,7 @@
         <form>
             <h1 style="font-weight: 900; font-size: 30px;">כתובת החניה:</h1><br>
             <input class="inp1" type="text" placeholder="עיר, רחוב, מספר בית..." name="Address"
-                [(ngModel)]="newParking.Street" required>
+                [(ngModel)]="newParking.Address" required>
             <br><br>
             <label>זמני השכרה:</label>
             <a routerLink="/nav/myCalender">
@@ -71,28 +71,18 @@
             <button mat-mini-fab color="primary" class="btn" (click)="fileUpload.click()">
                 <img src='../assets/icon/download.png' height="40px">
             </button>
-            <!-- <img *ngIf="newParking.IMG1" src="./../../assets/gallery/{{newParking.IMG1}}"
-                style="background-image: none;" height="100px">
-
-            <br>
-            <img *ngIf="newParking.IMG2" src="./../../assets/gallery/{{newParking.IMG2}}"
-                style="background-image: none;" height="100px">
-            <br>
-            <img *ngIf="newParking.IMG3" src="./../../assets/gallery/{{newParking.IMG3}}"
-                style="background-image: none;" height="100px"> -->
         </div>
-        <!-- The grid: four columns -->
         <div id="row">
             <div>
-                <img *ngIf="newParking.IMG1" src="./../../assets/gallery/{{newParking.IMG1}}" (click)="myFunction($event.target);"
+                <img *ngIf="newParking.IMG1" src="./../../assets/gallery/{{newParking.IMG1}}" (click)="myFunction(newParking.IMG1);"
                     style="background-image: none;" height="100px">
             </div>
             <div >
-                <img *ngIf="newParking.IMG2" src="./../../assets/gallery/{{newParking.IMG2}}" (click)="myFunction($event.target);"
+                <img *ngIf="newParking.IMG2" src="./../../assets/gallery/{{newParking.IMG2}}" (click)="myFunction(newParking.IMG2);"
                     style="background-image: none;" height="100px">
             </div>
             <div >
-                <img *ngIf="newParking.IMG3" src="./../../assets/gallery/{{newParking.IMG3}}" (click)="myFunction($event.target);"
+                <img *ngIf="newParking.IMG3" src="./../../assets/gallery/{{newParking.IMG3}}" (click)="myFunction(newParking.IMG3);"
                     style="background-image: none;" height="100px">
             </div>
         </div>
@@ -100,10 +90,10 @@
         <!-- The expanding image container -->
         <div class="container">
             <!-- Close the image -->
-            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
 
             <!-- Expanded image -->
-            <img id="expandedImg" style="width:100%">
+            <img *ngIf="bigImage" id="expandedImg" style="height: 400px;width:min-content;" src="./../../assets/gallery/{{bigImage}}">
 
             <!-- Image text -->
             <div id="imgtext"></div>
