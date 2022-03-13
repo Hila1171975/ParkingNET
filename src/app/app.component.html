@@ -1,3 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" style="direction: rtl;">
-<router-outlet></router-outlet></html>
+<router-outlet></router-outlet>
+
+<!-- <h1>כתובת</h1>
+<input id="pac-input" type="text" class="form__field" #addresstext placeholder="כתובת" name="address"
+     (click)="location()" />
+<label class="form__label"> </label> -->
+
+<!-- <input ngx-google-places-autocomplete  #placesRef="ngx-places" /> -->
+<input ngx-google-places-autocomplete  #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+
+
+</html>

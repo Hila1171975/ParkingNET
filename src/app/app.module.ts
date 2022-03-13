@@ -23,6 +23,8 @@ import { MapComponent } from './map/map.component';
 import { ContactComponent } from './contact/contact.component'
 import { ScheduleModule, DayService, WeekService, WorkWeekService, MonthService, AgendaService, DragAndDropService, ResizeService} from '@syncfusion/ej2-angular-schedule';
 import { CalenderComponent } from './calender/calender.component';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { CalenderComponent } from './calender/calender.component';
     HttpClientModule,
     FormsModule,
     GoogleMapsModule,
-    ScheduleModule
+    ScheduleModule,
+    GooglePlaceModule
   ],
   providers: [BankAccountService, ParkingService, RentService, UserService,  DayService, WeekService, WorkWeekService, MonthService, AgendaService,DragAndDropService,ResizeService],
   bootstrap: [AppComponent]

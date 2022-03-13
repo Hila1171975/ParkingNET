@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Parking } from 'src/classes/Parking';
 import { ParkingService } from '../Services/parking.service';
 import { UserService } from '../Services/user.service';
@@ -23,7 +23,7 @@ export class EditParkingDetailsComponent implements OnInit {
   ch4: boolean = false
   i: number = 0
   fileName = '';
-  constructor(public ParkingService: ParkingService, public ActiveRoute: ActivatedRoute, public UserService: UserService, public sanitizer: DomSanitizer) { }
+  constructor(public ParkingService: ParkingService, public ActiveRoute: ActivatedRoute, public UserService: UserService, public sanitizer: DomSanitizer,public router: Router) { }
 
 
   onFileSelected(event: any) {
@@ -54,10 +54,14 @@ export class EditParkingDetailsComponent implements OnInit {
       this.ParkingService.addParking(this.newParking).
         subscribe(data => { this.b = data }, err => { console.log(err) })
       if (this.b = true)
+      {
         alert("החניה נוספה בהצלחה")
+        this.router.navigate(['/nav/myParkingList'])
+      }
     }
     else {
       this.ParkingService.updateParking(this.newParking).subscribe(suc => { alert("עדכון הצליח") }, err => { console.log(err) })
+      this.router.navigate(['/nav/myParkingList'])
     }
   }
 
@@ -98,6 +102,8 @@ export class EditParkingDetailsComponent implements OnInit {
     this.newParking.AccountId = 3;
     this.newParking.UserId = this.UserService.userId;
     this.newParking.PayPerHour = 2;
+    this.newParking.Lat=5
+    this.newParking.Lan=8
 
     this.ActiveRoute.params.subscribe(x => {
       if (x["id"] > 0) {

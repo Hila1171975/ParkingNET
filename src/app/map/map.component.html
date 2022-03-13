@@ -1,5 +1,5 @@
 <html lang="en" style="direction: rtl; text-align: center;">
-<google-map></google-map>
+<map width="100px" height="100px"></map>
 
 <div><img src='../assets/img/Asset34.png' width="100%"></div>
 
@@ -15,7 +15,7 @@
 <div class="tbl">
     <table style="font-size: 30px; width: 100%; margin-top: 50px;">
         <tr *ngFor="let item of FindParkingService.closestParking">
-            <th>{{item.Address}} UserId{{item.UserId}}</th>
+            <th> UserId{{item.UserId}}</th>
             <th><img *ngIf="item.IMG1" src="./../../assets/gallery/{{item.IMG1}}"
                     style="background-image: none; margin: 0px;margin-right: 5px;" height="50px">
                 <img *ngIf="item.IMG2" src="./../../assets/gallery/{{item.IMG2}}"
