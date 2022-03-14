@@ -16,6 +16,7 @@ export class FindParkingService {
   // חיפוש 3 חניות הקרובות ביותר
   Search3Parkings(lat:number, lan:number,r:Rent):Observable<Array<Parking>>
   {
+    debugger;
     return this.httpClient.post<Array<Parking>>(this.url+ 'Search3Parkings/'+ lat + '/' + lan, r)
   }
 }

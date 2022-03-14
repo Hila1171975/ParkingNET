@@ -3,10 +3,12 @@
         <div class="icn"><img src='../assets/icon/Asset41.png'></div>
         <div class="div1">
             <div><img src='../assets/icon/Asset7.png'>הכנס מיקום</div>
-            <input type="text" placeholder="מיקומך הנוכחי" id="location" name="location" [(ngModel)]="myLocation" required #location="ngModel">
-            <div  class="alert-danger" *ngIf="location.invalid && ( location.dirty || location.touched)&&submited">
+            <!-- <input type="text" placeholder="מיקומך הנוכחי" id="location" name="location" [(ngModel)]="myLocation" required #location="ngModel"> -->
+            <input ngx-google-places-autocomplete  #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+         
+            <!-- <div  class="alert-danger" *ngIf="location.invalid && ( location.dirty || location.touched)&&submited">
                 <p *ngIf="location.errors?.['required']">שדה חובה</p>   
-              </div>
+              </div> -->
         </div>
         <div class="div1">
             <div><img src='../assets/icon/Asset5.png'>הכנס שעה</div>

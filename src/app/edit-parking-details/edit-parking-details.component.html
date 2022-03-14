@@ -13,8 +13,9 @@
     <div class="frm">
         <form>
             <h1 style="font-weight: 900; font-size: 30px;">כתובת החניה:</h1><br>
-            <input class="inp1" type="text" placeholder="עיר, רחוב, מספר בית..." name="Address"
-                [(ngModel)]="newParking.Address"  required>
+            <!-- <input class="inp1" type="text" placeholder="עיר, רחוב, מספר בית..." name="Address"
+                [(ngModel)]="newParking.Address"  required> -->
+            <input class="inp1" name="Address" [(ngModel)]="newParking.Address"  required ngx-google-places-autocomplete  #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
             <br><br>
             <label>זמני השכרה:</label>
             <a routerLink="/nav/myCalender">

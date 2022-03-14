@@ -3,9 +3,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Parking } from 'src/classes/Parking';
 import { ParkingService } from '../Services/parking.service';
 import { UserService } from '../Services/user.service';
-import { saveAs } from 'file-saver';
-import * as FileSaver from 'file-saver';
+// import { saveAs } from 'file-saver';
+// import * as FileSaver from 'file-saver';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Address } from 'ngx-google-places-autocomplete/objects/address';
 
 @Component({
   selector: 'app-edit-parking-details',
@@ -23,8 +24,17 @@ export class EditParkingDetailsComponent implements OnInit {
   ch4: boolean = false
   i: number = 0
   fileName = '';
+  lat: number = 22;
+  lan: number = 34;
+  
   constructor(public ParkingService: ParkingService, public ActiveRoute: ActivatedRoute, public UserService: UserService, public sanitizer: DomSanitizer,public router: Router) { }
 
+  public handleAddressChange(address: Address) {
+    this.lat = address.geometry.location.lat()
+    debugger;
+    this.lat = address.geometry.location.lng()
+
+  }
 
   onFileSelected(event: any) {
     let formData = new FormData();
